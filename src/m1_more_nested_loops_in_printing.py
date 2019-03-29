@@ -56,7 +56,7 @@ def triangle_right_justified(r):
     For purposes of "lining up", assume r is a single digit.
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # HINT: Do the following problem FIRST, then convert x's to spaces:
@@ -74,9 +74,11 @@ def triangle_right_justified(r):
     #   in this or the other problems in this module, as doing so would
     #   defeat the goal of providing practice at loops within loops.
     # -------------------------------------------------------------------------
-    for k in range(r):
-        for j in range(k + 2):
-            print('x' * j, end='')
+    for k in range(1, r + 1):
+        for j in range(r - k):
+            print(' ', end='')
+        for i in range(k):
+            print(i + 1, end='')
         print()
 
 def run_test_triangle_upside_down():
@@ -113,7 +115,7 @@ def triangle_upside_down(r):
     For purposes of "lining up", assume r is a single digit.
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -121,6 +123,12 @@ def triangle_upside_down(r):
     #   in this or the other problems in this module, as doing so would
     #   defeat the goal of providing practice at loops within loops.
     # -------------------------------------------------------------------------
+    for k in range(r, -1, -1):
+        for j in range(r - k):
+            print(' ', end='')
+        for i in range(k):
+            print(i + 1, end='')
+        print()
 
 
 def run_test_vee():
